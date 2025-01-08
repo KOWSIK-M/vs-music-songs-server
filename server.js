@@ -3,10 +3,10 @@ const cors = require("cors");
 const axios = require("axios");
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Enable CORS to allow requests from your VS Code extension
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 // GitHub repository details
 const GITHUB_REPO = "KOWSIK-M/vs-music-songs";
