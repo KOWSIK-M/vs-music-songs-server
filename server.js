@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
@@ -17,7 +18,7 @@ const RAW_BASE_URL = "https://raw.githubusercontent.com";
 app.get("/songs", async (req, res) => {
   try {
     const headers = {
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer ${process.env.GIT_PAT}`,
     };
     const response = await axios.get(GITHUB_API_URL, { headers });
 
