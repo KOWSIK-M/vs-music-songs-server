@@ -18,6 +18,8 @@ app.get("/songs", async (req, res) => {
   try {
     const headers = {
       Authorization: `Bearer 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`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
     };
     const response = await axios.get(GITHUB_API_URL, { headers });
 
