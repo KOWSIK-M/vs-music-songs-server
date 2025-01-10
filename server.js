@@ -16,7 +16,10 @@ const RAW_BASE_URL = "https://raw.githubusercontent.com";
 // API endpoint to get the songs list
 app.get("/songs", async (req, res) => {
   try {
-    const response = await axios.get(GITHUB_API_URL); // Removed headers here
+    const headers = {
+      Authorization: `Bearer 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`,
+    };
+    const response = await axios.get(GITHUB_API_URL, { headers });
 
     const files = response.data;
 
