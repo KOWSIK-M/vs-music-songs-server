@@ -17,7 +17,7 @@ const RAW_BASE_URL = "https://raw.githubusercontent.com";
 app.get("/songs", async (req, res) => {
   try {
     const headers = {
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer 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`,
     };
     const response = await axios.get(GITHUB_API_URL, { headers });
 
